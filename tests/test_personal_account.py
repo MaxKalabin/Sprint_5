@@ -16,4 +16,3 @@ class TestPersonalAccount:
         WebDriverWait(driver, 3).until(ec.visibility_of_element_located(LOGOUT_BUTTON))
 
         assert driver.current_url == "https://stellarburgers.nomoreparties.site/account/profile"
-        driver.quit()

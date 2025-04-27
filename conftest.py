@@ -17,7 +17,8 @@ def driver():
 
     driver = webdriver.Chrome(service=service, options=options)
     driver.get("https://stellarburgers.nomoreparties.site/")
-    return driver
+    yield driver
+    driver.quit()
 
 @pytest.fixture()
 def registration(driver):

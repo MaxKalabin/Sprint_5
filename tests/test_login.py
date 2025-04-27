@@ -17,8 +17,6 @@ class TestLogin:
         WebDriverWait(driver, 3).until(ec.visibility_of_element_located(MAIN_PAGE_HEADER))
 
         assert driver.current_url == "https://stellarburgers.nomoreparties.site/"
-        driver.quit()
-
 
     def test_login_from_personal_account(self, driver, registration):
         email, password = registration
@@ -34,7 +32,6 @@ class TestLogin:
         WebDriverWait(driver, 3).until(ec.visibility_of_element_located(MAIN_PAGE_HEADER))
 
         assert driver.current_url == "https://stellarburgers.nomoreparties.site/"
-        driver.quit()
 
     def test_login_from_registration_form(self, driver, registration):
         email, password = registration
@@ -54,7 +51,6 @@ class TestLogin:
         WebDriverWait(driver, 3).until(ec.visibility_of_element_located(MAIN_PAGE_HEADER))
 
         assert driver.current_url == "https://stellarburgers.nomoreparties.site/"
-        driver.quit()
 
     def test_login_from_recovery_pass_form(self, driver, registration):
         email, password = registration
@@ -74,4 +70,3 @@ class TestLogin:
         WebDriverWait(driver, 3).until(ec.visibility_of_element_located(MAIN_PAGE_HEADER))
 
         assert driver.current_url == "https://stellarburgers.nomoreparties.site/"
-        driver.quit()

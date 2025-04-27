@@ -20,4 +20,3 @@ class TestLogout:
         WebDriverWait(driver, 10).until(ec.url_to_be("https://stellarburgers.nomoreparties.site/login"))
 
         assert driver.current_url == "https://stellarburgers.nomoreparties.site/login"
-        driver.quit()

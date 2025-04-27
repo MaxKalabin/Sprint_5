@@ -17,8 +17,6 @@ class TestRegistration:
         WebDriverWait(driver, 3).until(ec.visibility_of_element_located(LOGIN_SUBMIT))
 
         assert driver.current_url == "https://stellarburgers.nomoreparties.site/login"
-        driver.quit()
-
 
     def test_invalid_password_error(self, driver):
         WebDriverWait(driver, 3).until(ec.element_to_be_clickable(LOGIN_BUTTON_MAIN))
@@ -33,4 +31,3 @@ class TestRegistration:
         WebDriverWait(driver, 3).until(ec.visibility_of_element_located(REGISTER_SUBMIT))
 
         assert driver.find_element(*PASSWORD_ERROR).is_displayed()
-        driver.quit()

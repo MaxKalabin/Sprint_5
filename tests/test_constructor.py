@@ -12,7 +12,7 @@ class TestConstructor:
         WebDriverWait(driver, 3).until(ec.visibility_of_element_located(ACTIVE_SECTION))
         active_section = driver.find_element(*ACTIVE_SECTION).text
         assert active_section == 'Соусы'
-        driver.quit()
+
 
     def test_fillings_section_activation(self, driver):
         element = driver.find_element(*FILLINGS_SECTION)
@@ -22,7 +22,6 @@ class TestConstructor:
         WebDriverWait(driver, 3).until(ec.visibility_of_element_located(ACTIVE_SECTION))
         active_section = driver.find_element(*ACTIVE_SECTION)
         assert "Начинки" in active_section.text
-        driver.quit()
 
     def test_buns_section_activation(self, driver):
         driver.find_element(*SAUCES_SECTION).click()
@@ -34,4 +33,3 @@ class TestConstructor:
         WebDriverWait(driver, 3).until(ec.visibility_of_element_located(ACTIVE_SECTION))
         active_section = driver.find_element(*ACTIVE_SECTION)
         assert "Булки" in active_section.text
-        driver.quit()
